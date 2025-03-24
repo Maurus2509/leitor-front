@@ -20,7 +20,7 @@ const success = (result) => {
     `;
 
     const post = async () => {
-        const endpoint = "https://api-leitor2-yxid.onrender.com/";
+        const endpoint = "https://api-leitor2-yxid.onrender.com/alunos/new";
 
         fetch(endpoint, {
             method: "POST",
