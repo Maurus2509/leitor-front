@@ -34,7 +34,7 @@ const success = (result) => {
             }
         });
     }
-    
+
     function initScanner() {
         // Cria um novo elemento div para o scanner
         const readerDiv = document.createElement('div');
@@ -54,9 +54,11 @@ const success = (result) => {
 
     btn.addEventListener("click", () => {
         post(qrdados);
+
         document.getElementById('result').innerHTML = '';
 
         initScanner();
+
     });
 
     scanner.clear();
