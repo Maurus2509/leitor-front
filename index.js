@@ -16,7 +16,7 @@ const success = (result) => {
     document.getElementById('result').innerHTML = `<h2>Success</h2>
     <p>${nome}</p>
     <p>${email}</p>
-    <button id="btn">Adicionar Curso 1</button>
+    <button id="btn">Adicionar</button>
     `;
 
     const post = async () => {
@@ -35,11 +35,8 @@ const success = (result) => {
         });
     }
 
-
     btn.addEventListener("click", () => {
         post(qrdados);
-
-
     });
 
     scanner.clear();
