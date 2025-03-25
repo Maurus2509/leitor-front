@@ -37,6 +37,13 @@ const success = (result) => {
 
     btn.addEventListener("click", () => {
         post(qrdados);
+
+        if (response.ok) {
+                // Recarrega a página após sucesso
+                location.reload();
+            } else {
+                console.error("Erro na requisição");
+            }
     });
 
     scanner.clear();
