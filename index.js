@@ -35,14 +35,8 @@ const success = (result) => {
         });
     }
 
-    const realod = () => {
-        location.reload();
-    }
-
     btn.addEventListener("click", () => {
         post(qrdados);
-
-        realod();
     });
 
     scanner.clear();
