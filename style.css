@@ -17,12 +17,44 @@ main {
 }
 
 #btn {
-    width: 200px;
-    height: 50px;
-    border-radius: 20px;
+    padding: 12px 24px;
+    background-color: #4285f4;
+    color: white;
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #btn:hover {
-    background-color: rgb(137, 137, 137);
+    background-color: #3367d6;
+}
+
+#btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de ripple (ondulação) */
+#btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10.01%) no-repeat 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+#btn:active::after {
+    transform: scale(0, 0);
+    opacity: 0.3;
+    transition: 0s;
 }
